@@ -100,6 +100,82 @@ footer b{font-family:'Cormorant Garamond',serif;color:var(--cream);font-size:1.3
  section{padding:56px 0}
 }
 </style>
+<style id="chel-awards-refresh">
+:root{--cream:#fff9ed;--sand:#f4e8d3;--taupe:#8a6447;--ink:#2d2118;--muted:#63574c;--gold:#eeb323;--white:#fffdf8;--line:#e8d8bf;--mango:#f2ba32;--brown:#74543d}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{background:var(--cream);color:var(--ink)}
+nav{position:fixed;inset:0 0 auto;z-index:100;background:rgba(255,249,237,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(116,84,61,.14);box-shadow:0 6px 26px rgba(45,33,24,.045)}
+nav .wrap{height:78px;max-width:1200px}
+.logo span{color:var(--brown)}
+nav ul a{transition:color .2s ease}
+nav ul a:hover{color:#a77524}
+.btn{background:var(--ink);box-shadow:0 10px 24px rgba(45,33,24,.12)}
+.btn:hover{background:#503b2b}
+.btn.gold{background:var(--mango);box-shadow:0 10px 24px rgba(185,137,33,.2)}
+.btn.gold:hover{background:#f7c94c}
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:142px 0 92px;background:linear-gradient(112deg,#fff9ed 0%,#fff9ed 57%,#f2e1bd 57%,#f7ecd7 100%)}
+.hero:after{content:"";position:absolute;z-index:-1;width:470px;aspect-ratio:1;border-radius:50%;right:-230px;top:8%;background:rgba(238,179,35,.14);filter:blur(1px)}
+.hero .wrap{max-width:1200px;gap:clamp(44px,8vw,112px)}
+.hero h1{max-width:12ch;font-size:clamp(3.2rem,6.4vw,5.5rem);letter-spacing:-.035em}
+.hero h1 em{color:var(--brown)}
+.hero p.lead{max-width:520px;font-size:1.1rem;line-height:1.8}
+.eyebrow{color:#9b712c}
+.dark .eyebrow{color:var(--mango)}
+.portrait{max-width:360px}
+.portrait .frame{aspect-ratio:2/3;border-radius:190px 190px 24px 24px;box-shadow:0 32px 72px -30px rgba(45,33,24,.5);outline:8px solid rgba(255,253,248,.55);outline-offset:-16px}
+.portrait img{object-position:center center}
+.badge{left:-24px;bottom:20px;border-radius:18px;padding:15px 20px}
+section{padding:clamp(76px,9vw,112px) 0}
+.alt{background:#f4e8d3}
+.dark{background:#2d2118;color:var(--cream)}
+.story{gap:clamp(36px,7vw,88px);align-items:center}
+.photo{max-width:360px;aspect-ratio:4/5;border-radius:180px 180px 22px 22px;background:#e7d5b8;box-shadow:0 24px 52px -24px rgba(45,33,24,.4)}
+.photo img{object-position:center top}
+.cap{margin-top:16px}
+.questions{border-left-color:var(--mango)}
+.pain li,.card{border-color:rgba(116,84,61,.15);box-shadow:0 12px 34px rgba(45,33,24,.035);transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-5px);box-shadow:0 22px 42px rgba(45,33,24,.09)}
+.card .num{color:#b78320}
+.tags span{border-color:rgba(116,84,61,.17);transition:background .2s ease,transform .2s ease}
+.tags span:hover{background:#f6e9c9;transform:translateY(-2px)}
+.checks li::before{background:var(--mango)}
+.avatar{border-color:var(--mango)}
+a:focus-visible{outline:3px solid #b78320;outline-offset:4px;border-radius:6px}
+@media(max-width:860px){
+ nav .wrap{height:auto;min-height:72px;flex-wrap:wrap;padding:11px 22px;gap:10px}
+ nav ul{display:flex;order:3;flex:0 0 100%;gap:22px;overflow-x:auto;white-space:nowrap;padding-bottom:2px;scrollbar-width:none}
+ nav ul::-webkit-scrollbar{display:none}
+ nav .btn.small{padding:9px 13px;font-size:.8rem}
+ .hero{padding:148px 0 64px;background:linear-gradient(180deg,#fff9ed 0%,#fff9ed 70%,#f4e8d3 100%)}
+ .hero .wrap{gap:42px}
+ .hero h1{max-width:12ch;font-size:clamp(3rem,9vw,4.5rem)}
+ .portrait{max-width:min(70vw,340px)}
+ .portrait .frame{aspect-ratio:2/3}
+ .story{gap:36px;align-items:start}
+ .photo{max-width:min(100%,380px)}
+ .g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .svc .card:last-child{grid-column:1/-1}
+}
+@media(max-width:560px){
+ body{font-size:16px}
+ nav .wrap{padding-inline:18px}
+ nav .logo{font-size:1.28rem}
+ nav .btn.small{padding:8px 10px;font-size:.75rem}
+ nav ul{gap:18px;font-size:.85rem}
+ .hero{padding-top:146px}
+ .hero h1{font-size:clamp(2.85rem,12vw,4rem)}
+ .portrait{max-width:min(78vw,320px)}
+ .badge{left:-9px;bottom:12px;padding:11px 14px}
+ section{padding:64px 0}
+ .g3,.g2{grid-template-columns:1fr}
+ .svc .card:last-child{grid-column:auto}
+ .card{padding:24px}
+ .cta-row{gap:10px}
+ .cta-row .btn{padding:12px 18px;font-size:.9rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+</style>
 </head>
 <body>
 
@@ -129,7 +205,7 @@ footer b{font-family:'Cormorant Garamond',serif;color:var(--cream);font-size:1.3
   </div>
   <div class="portrait">
    <div class="frame">
-    <img src="hero.webp" alt="Chelle Abella, founder of CHEL Web Studio" width="720" height="900" onerror="this.style.display='none';this.parentNode.innerHTML='<span class=mono>C</span>'">
+    <img src="12c4788c-2c6d-4872-b0a8-0b2d367e6786.jpeg" alt="Chelle Abella seated in a black blazer, founder of CHEL Web Studio" width="1024" height="1536" fetchpriority="high" decoding="async">
    </div>
    <div class="badge"><b>Chelle Abella</b>Founder, CHEL Web Studio</div>
   </div>
@@ -250,7 +326,7 @@ footer b{font-family:'Cormorant Garamond',serif;color:var(--cream);font-size:1.3
 
 <section class="dark contact" id="contact">
  <div class="wrap">
-  <div class="avatar"><img src="contact.webp" alt="Chelle Abella" width="420" height="525" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+  <div class="avatar"><img src="c35ac385-a951-4c47-888c-29a6f864242c.jpeg" alt="Chelle Abella in a black blazer, looking toward the light" width="1024" height="1536" loading="lazy" decoding="async"></div>
   <div class="eyebrow">Let’s Talk</div>
   <h2>Let’s talk about your business.</h2>
   <p>Wondering whether a website or online store could work for you? I’d love to learn about your products or services, your current ordering process, and your goals. No need to have everything prepared. Just bring your ideas.</p>
