@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chelle Abella | CHEL Web Studio — Websites & Shopify Stores for Filipino Local Businesses</title>
+<meta name="description" content="Chelle Abella of CHEL Web Studio helps Filipino local businesses build their online presence with professional websites, mobile-friendly Shopify stores, and convenient online ordering.">
+<meta property="og:title" content="CHEL Web Studio — Helping Local Businesses Grow Beyond Their Storefront">
+<meta property="og:description" content="Professional websites and Shopify online stores for Filipino local businesses, by Chelle Abella. Book a free consultation.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231f1b17'/><text x='50' y='68' font-size='56' text-anchor='middle' font-family='Georgia' fill='%23c9a46a'>C</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f7f1e8;--sand:#efe5d6;--taupe:#8c7a68;--ink:#1f1b17;--muted:#5e544a;--gold:#b8914f;--white:#fffdf9;--line:#e3d6c3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.12;font-weight:600}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:20;background:rgba(247,241,232,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700;letter-spacing:.02em;text-decoration:none}
+.logo span{color:var(--gold)}
+nav ul{display:flex;gap:26px;list-style:none;font-size:.92rem}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--ink);color:var(--cream);padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.98rem;transition:transform .15s,background .15s}
+.btn:hover{background:#3a322b;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--cream)}
+.btn.gold{background:var(--gold);color:#1f1b17}
+.btn.small{padding:9px 20px;font-size:.88rem}
+.hero{padding:64px 0 76px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.1rem);margin-bottom:22px}
+.hero h1 em{color:var(--taupe);font-style:italic}
+.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:540px;margin-bottom:30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.portrait{position:relative;justify-self:center;width:100%;max-width:340px}
+.portrait .frame{border-radius:200px 200px 22px 22px;overflow:hidden;background:var(--sand);aspect-ratio:4/5;box-shadow:0 24px 50px -22px rgba(31,27,23,.45);display:flex;align-items:center;justify-content:center}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.portrait .mono{font-family:'Cormorant Garamond',serif;font-size:7rem;color:var(--gold)}
+.badge{position:absolute;bottom:-14px;left:-14px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:.82rem;line-height:1.4;box-shadow:0 10px 24px -14px rgba(31,27,23,.4)}
+.badge b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.2rem}
+section{padding:76px 0}
+.alt{background:var(--sand)}
+.dark{background:var(--ink);color:var(--cream)}
+.dark .eyebrow{color:#c9a46a}
+.sec-head{max-width:680px;margin-bottom:42px}
+.sec-head h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px}
+.sec-head p{color:var(--muted)}
+.dark .sec-head p{color:#d8ccbb}
+.story{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px;align-items:start}
+.story .col p{margin-bottom:16px;color:var(--muted)}
+.story .col p strong{color:var(--ink)}
+.photo{margin-top:26px;max-width:300px;border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--sand);box-shadow:0 20px 44px -22px rgba(31,27,23,.45)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.cap{margin-top:10px;font-size:.88rem;color:var(--muted)}
+.cap b{color:var(--ink)}
+.questions{margin:22px 0;padding:6px 0 6px 20px;border-left:3px solid var(--gold)}
+.questions p{font-family:'Cormorant Garamond',serif;font-size:1.28rem;font-style:italic;color:var(--ink)!important;margin:10px 0!important}
+.pain{list-style:none;display:grid;gap:12px}
+.pain li{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 20px;color:var(--muted);font-size:.98rem}
+.pain li b{color:var(--ink)}
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px}
+.card .num{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:2.2rem;font-weight:700;line-height:1;margin-bottom:10px}
+.card h3{font-size:1.45rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem}
+.svc .ic{font-size:1.8rem;margin-bottom:10px}
+.checks{list-style:none;display:grid;gap:14px;counter-reset:c}
+.checks li{counter-increment:c;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 20px}
+.checks li::before{content:counter(c);width:36px;height:36px;border-radius:50%;background:var(--gold);color:#1f1b17;font-weight:700;display:flex;align-items:center;justify-content:center}
+.checks b{display:block;font-size:1.05rem;margin-bottom:2px}
+.checks span{color:#d8ccbb;font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-size:.95rem}
+.reminder{text-align:center;max-width:760px;margin:0 auto}
+.reminder h2{font-size:clamp(1.9rem,3.8vw,2.8rem);margin-bottom:18px}
+.reminder p{color:var(--muted);margin-bottom:14px}
+.contact{text-align:center}
+.contact h2{font-size:clamp(2.2rem,4.6vw,3.5rem);margin-bottom:16px}
+.contact p{color:#d8ccbb;max-width:560px;margin:0 auto 28px}
+.avatar{width:132px;height:132px;border-radius:50%;overflow:hidden;margin:0 auto 22px;border:3px solid var(--gold);background:var(--sand)}
+.avatar img{width:100%;height:100%;object-fit:cover;object-position:center 12%;display:block}
+footer{background:#16130f;color:#b9ad9c;text-align:center;padding:34px 0;font-size:.9rem}
+footer b{font-family:'Cormorant Garamond',serif;color:var(--cream);font-size:1.3rem;display:block;margin-bottom:4px}
+@media(max-width:860px){
+ nav ul{display:none}
+ .hero{padding:40px 0 56px}
+ .hero .wrap,.story{grid-template-columns:1fr}
+ .portrait{order:-1;max-width:260px}
+ .g3,.g2{grid-template-columns:1fr}
+ section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="wrap">
+  <a href="#top" class="logo">CHEL <span>Web Studio</span></a>
+  <ul>
+   <li><a href="#story">My Story</a></li>
+   <li><a href="#why">Why a Website</a></li>
+   <li><a href="#services">Services</a></li>
+   <li><a href="#tips">Free Tips</a></li>
+  </ul>
+  <a class="btn small" href="https://calendly.com/chelleabella" target="_blank" rel="noopener">Book a Consultation</a>
+ </div>
+</nav>
+
+<header class="hero" id="top">
+ <div class="wrap">
+  <div>
+   <div class="eyebrow">Chelle Abella · Websites &amp; Shopify Stores</div>
+   <h1>Helping Local Businesses <em>Grow Beyond Their Storefront.</em></h1>
+   <p class="lead">Hi, I’m Chelle, founder of CHEL Web Studio. I build professional websites, mobile-friendly online stores, and convenient online ordering for Filipino small businesses ready to take their next step into the digital world.</p>
+   <div class="cta-row">
+    <a class="btn" href="https://calendly.com/chelleabella" target="_blank" rel="noopener">Book a Free Consultation</a>
+    <a class="btn ghost" href="#services">See What I Offer</a>
+   </div>
+  </div>
+  <div class="portrait">
+   <div class="frame">
+    <img src="hero.webp" alt="Chelle Abella, founder of CHEL Web Studio" width="720" height="900" onerror="this.style.display='none';this.parentNode.innerHTML='<span class=mono>C</span>'">
+   </div>
+   <div class="badge"><b>Chelle Abella</b>Founder, CHEL Web Studio</div>
+  </div>
+ </div>
+</header>
+
+<section class="alt">
+ <div class="wrap">
+  <div class="sec-head">
+   <div class="eyebrow">Sound Familiar?</div>
+   <h2>The problem usually isn’t your products.</h2>
+   <p>Many Filipino small business owners work hard every day: posting consistently, replying to messages, and joining online selling communities. But sometimes the challenge is how customers discover, browse, and order.</p>
+  </div>
+  <ul class="pain">
+   <li><b>Hours on Messenger.</b> Replying to inquiries, sending product photos and price lists, confirming orders, and checking payments one by one.</li>
+   <li><b>Waiting for walk-ins.</b> Owning a physical store but hoping more people will discover your products.</li>
+   <li><b>Too many chats at once.</b> Keeping track of messages, orders, and payments when several customers inquire at the same time.</li>
+  </ul>
+ </div>
+</section>
+
+<section id="story">
+ <div class="wrap story">
+  <div>
+   <div class="eyebrow">My Story</div>
+   <h2 style="font-size:clamp(2rem,4vw,3rem)">Why I started CHEL Web Studio</h2>
+   <div class="photo"><img src="about.webp" alt="Chelle Abella" width="620" height="774" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+   <p class="cap"><b>Chelle Abella</b><br>Founder, CHEL Web Studio</p>
+  </div>
+  <div class="col">
+   <p>Before this journey, I started a <strong>digital printables and printing business</strong>. Through it, I became part of Facebook communities and met other sellers whose creativity, hard work, and determination I truly admired.</p>
+   <p>But I noticed a common challenge: many were managing almost everything manually through Facebook. Customers asked for prices, requested details, confirmed orders, and arranged payments through private messages. For some, every sale meant another long conversation.</p>
+   <p>Traditional businesses and physical stores face their own challenges too, often depending on walk-in customers and social media visibility. That’s when I started asking:</p>
+   <div class="questions">
+    <p>What if customers could browse products, check prices, and place orders more conveniently?</p>
+    <p>What if business owners could present their products professionally instead of relying only on posts and Messenger?</p>
+    <p>What if customers could discover a business even when they weren’t near the store?</p>
+   </div>
+   <p>Those questions led me to learn e-commerce website development using <strong>Shopify and AI-assisted tools</strong>, and that’s how CHEL Web Studio began to take shape.</p>
+   <p>My goal is simple: to help traditional Filipino businesses take their next step online, because even small, home-based, and traditional businesses deserve the chance to grow.</p>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="why">
+ <div class="wrap">
+  <div class="sec-head">
+   <div class="eyebrow">Why a Website</div>
+   <h2>Five ways a website can help your business.</h2>
+   <p>A Facebook page is a great starting point. A website complements it by giving customers another way to discover and interact with your business.</p>
+  </div>
+  <div class="grid g3">
+   <div class="card"><div class="num">01</div><h3>A dedicated online home</h3><p>Organize your offerings into categories so customers can browse products, descriptions, and prices in one place, instead of scrolling through months of posts.</p></div>
+   <div class="card"><div class="num">02</div><h3>More convenient ordering</h3><p>Depending on setup, customers can add to cart, submit orders, choose payment methods, and receive confirmations, reducing repetitive Messenger conversations.</p></div>
+   <div class="card"><div class="num">03</div><h3>Reach beyond your community</h3><p>A physical store serves people who can visit. A website can introduce your products to other towns and cities, with the right delivery arrangements and marketing.</p></div>
+   <div class="card"><div class="num">04</div><h3>A more professional presence</h3><p>Showcase your brand, products, story, policies, and contact details in one place so potential customers can decide if you’re the right fit.</p></div>
+   <div class="card"><div class="num">05</div><h3>A foundation for growth</h3><p>Your online store can become part of a broader strategy that includes social media, search visibility, and customer retention.</p></div>
+   <div class="card" style="background:var(--ink);color:var(--cream)"><h3 style="color:var(--cream)">Facebook + Website</h3><p style="color:#d8ccbb">Your website doesn’t have to replace Facebook. The two can work together.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="services">
+ <div class="wrap">
+  <div class="sec-head">
+   <div class="eyebrow">What I Offer</div>
+   <h2>Practical, customer-friendly online experiences.</h2>
+   <p>Every business is different. I start by understanding what you sell and how you currently receive orders, then decide which features make the most sense.</p>
+  </div>
+  <div class="grid g2 svc">
+   <div class="card"><div class="ic">🌐</div><h3>Business Websites</h3><p>A professional online presence where customers can learn about your brand, products, and services.</p></div>
+   <div class="card"><div class="ic">🛍️</div><h3>Shopify Online Stores</h3><p>Showcase your products in an organized online shop with features suited to your business needs.</p></div>
+   <div class="card"><div class="ic">📱</div><h3>Mobile-Friendly Design</h3><p>Help customers browse and navigate comfortably from their smartphones.</p></div>
+   <div class="card"><div class="ic">🛒</div><h3>Convenient Online Ordering</h3><p>Product selection, carts, checkout, and suitable payment options, depending on agreed features and available integrations.</p></div>
+   <div class="card" style="grid-column:1/-1"><div class="ic">📣</div><h3>Digital Presence Support</h3><p>Help your business present its products and information clearly online, with room to explore more digital marketing services as you grow.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt">
+ <div class="wrap">
+  <div class="sec-head">
+   <div class="eyebrow">Who I Can Help</div>
+   <h2>Built for Filipino entrepreneurs and local businesses.</h2>
+   <p>Whether you’re just starting out or have operated for years, the goal is a digital solution that fits your business, your customers, and your stage of growth.</p>
+  </div>
+  <div class="tags">
+   <span>🖨️ Digital printables &amp; printing</span><span>🍰 Home-based bakers &amp; bakeries</span><span>👗 Clothing &amp; fashion boutiques</span><span>🎁 Handmade crafts &amp; gift shops</span><span>🧴 Beauty &amp; personal care</span><span>🛒 Sari-sari &amp; specialty stores</span><span>🍪 Food &amp; local product sellers</span><span>🏪 Traditional retail stores</span><span>📦 Messenger-based sellers</span>
+  </div>
+ </div>
+</section>
+
+<section class="dark" id="tips">
+ <div class="wrap">
+  <div class="sec-head">
+   <div class="eyebrow">Free Business Tip</div>
+   <h2>5 things to prepare before building your website.</h2>
+   <p>You don’t need hundreds of products or a complicated site to begin. A simple, well-organized online store can be a practical first step.</p>
+  </div>
+  <ol class="checks">
+   <li><div><b>Organize your product list</b><span>Names, prices, descriptions, sizes or variations, and stock information.</span></div></li>
+   <li><div><b>Prepare clear product photos</b><span>Bright, accurate photos, kept organized for easy uploading.</span></div></li>
+   <li><div><b>Decide how customers will order</b><span>Pay online, pay upon delivery where available, or submit an order for confirmation.</span></div></li>
+   <li><div><b>Plan delivery or pickup</b><span>Service areas, delivery fees, preparation times, and store pickup options.</span></div></li>
+   <li><div><b>Make your business info easy to find</b><span>Business name, logo, contact details, operating hours, social links, and basic policies.</span></div></li>
+  </ol>
+ </div>
+</section>
+
+<section>
+ <div class="wrap reminder">
+  <div class="eyebrow">A Little Reminder</div>
+  <h2>Your business may be local, but your opportunities don’t have to stop at your doorstep. 🇵🇭</h2>
+  <p>You don’t need to be a big company to build your online presence. You don’t need to abandon your physical store, and you don’t need to stop using Facebook.</p>
+  <p>Of course, a website alone doesn’t guarantee more sales. It still takes good products, customer service, effective marketing, and a convenient buying experience. But when these work together, your business can be better prepared to serve customers and pursue new opportunities.</p>
+ </div>
+</section>
+
+<section class="dark contact" id="contact">
+ <div class="wrap">
+  <div class="avatar"><img src="contact.webp" alt="Chelle Abella" width="420" height="525" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+  <div class="eyebrow">Let’s Talk</div>
+  <h2>Let’s talk about your business.</h2>
+  <p>Wondering whether a website or online store could work for you? I’d love to learn about your products or services, your current ordering process, and your goals. No need to have everything prepared. Just bring your ideas.</p>
+  <a class="btn gold" href="https://calendly.com/chelleabella" target="_blank" rel="noopener">📅 Book a Consultation with Chelle</a>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <b>CHEL Web Studio</b>
+  Chelle Abella · Helping Local Businesses Grow Beyond Their Storefront.<br>
+  <span style="opacity:.7">Your business. Your online presence. More possibilities.</span>
+ </div>
+</footer>
+
+</body>
+</html>
