@@ -179,13 +179,18 @@ footer{background:var(--espresso);color:#E7E1D5}
 .contact-options{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:22px auto 0}.contact-options a{display:inline-flex;align-items:center;color:var(--cream);border:1px solid rgba(244,239,228,.36);border-radius:999px;padding:10px 16px;text-decoration:none;font-size:.9rem;transition:background .2s ease,border-color .2s ease}.contact-options a:hover{background:rgba(197,166,107,.14);border-color:var(--champagne)}.contact-options span{color:var(--champagne);margin-right:8px}@media(max-width:560px){.contact-options{gap:9px}.contact-options a{font-size:.78rem;padding:10px 12px}}
 
 .logo{display:block;position:relative;width:210px;height:94px;overflow:hidden;flex:none;letter-spacing:0}.logo img{position:absolute;left:50%;top:50%;width:110%;max-width:none;height:auto;transform:translate(-50%,-52%)}nav .wrap{height:96px}.portfolio-showcase{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,56px);align-items:center;background:var(--white);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,42px);box-shadow:0 16px 38px rgba(59,47,41,.06)}.portfolio-logo-crop{position:relative;aspect-ratio:2.2/1;overflow:hidden;background:var(--beige);border-radius:16px}.portfolio-logo-crop img{position:absolute;left:50%;top:50%;width:110%;max-width:none;height:auto;transform:translate(-50%,-52%)}.portfolio-showcase h3{font-size:clamp(1.6rem,3vw,2rem);margin:6px 0 12px}.portfolio-showcase p{margin-bottom:22px}@media(max-width:860px){nav .logo{width:168px;height:75px}.portfolio-showcase{grid-template-columns:1fr}}@media(max-width:560px){nav .logo{width:150px;height:68px}}
+
+/* Navigation switches between focused page views. */
+body.views-ready [data-page]{display:none!important}
+body.views-ready[data-view="home"] [data-page="home"],body.views-ready[data-view="services"] [data-page="services"],body.views-ready[data-view="portfolio"] [data-page="portfolio"],body.views-ready[data-view="about"] [data-page="about"],body.views-ready[data-view="contact"] [data-page="contact"]{display:block!important}
+nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
 </style>
 </head>
 <body>
 
 <nav>
  <div class="wrap">
-  <a href="#top" class="logo" aria-label="CHEL Web Studio home"><img src="HELPING LOCAL BUSINESSES GROW BEYOND THE STOREFRONT.png" alt="CHEL Web Studio — Helping Local Businesses Grow Beyond the Storefront"></a>
+  <a href="#top" class="logo" aria-label="CHEL Web Studio home"><img src="HELPING LOCAL BUSINESSES GROW BEYOND THE STOREFRONT (1).png" alt="CHEL Web Studio — Helping Local Businesses Grow Beyond the Storefront"></a>
   <ul>
    <li><a href="#top">Home</a></li>
    <li><a href="#services">Services</a></li>
@@ -197,7 +202,7 @@ footer{background:var(--espresso);color:#E7E1D5}
  </div>
 </nav>
 
-<header class="hero" id="top">
+<header class="hero" id="top" data-page="home">
  <div class="wrap">
   <div>
    <div class="eyebrow">Chelle Abella · Websites &amp; Shopify Stores</div>
@@ -217,7 +222,7 @@ footer{background:var(--espresso);color:#E7E1D5}
  </div>
 </header>
 
-<section class="alt">
+<section class="alt" data-page="about">
  <div class="wrap">
   <div class="sec-head">
    <div class="eyebrow">Sound Familiar?</div>
@@ -232,7 +237,7 @@ footer{background:var(--espresso);color:#E7E1D5}
  </div>
 </section>
 
-<section id="story">
+<section id="story" data-page="about">
  <div class="wrap story">
   <div>
    <div class="eyebrow">My Story</div>
@@ -255,7 +260,7 @@ footer{background:var(--espresso);color:#E7E1D5}
  </div>
 </section>
 
-<section class="alt" id="why">
+<section class="alt" id="why" data-page="about">
  <div class="wrap">
   <div class="sec-head">
    <div class="eyebrow">Why a Website</div>
@@ -273,7 +278,7 @@ footer{background:var(--espresso);color:#E7E1D5}
  </div>
 </section>
 
-<section id="services">
+<section id="services" data-page="services">
  <div class="wrap">
   <div class="sec-head">
    <div class="eyebrow">What I Offer</div>
@@ -290,7 +295,7 @@ footer{background:var(--espresso);color:#E7E1D5}
  </div>
 </section>
 
-<section class="alt" id="portfolio">
+<section class="alt" id="portfolio" data-page="portfolio">
  <div class="wrap">
   <div class="sec-head">
    <div class="eyebrow">Portfolio</div>
@@ -298,7 +303,7 @@ footer{background:var(--espresso);color:#E7E1D5}
    <p>My studio website is an example of the clear, mobile-friendly experience I create for local businesses.</p>
   </div>
   <article class="portfolio-showcase">
-   <div class="portfolio-logo-crop"><img src="HELPING LOCAL BUSINESSES GROW BEYOND THE STOREFRONT.png" alt="Official CHEL Web Studio logo and tagline" loading="lazy" decoding="async"></div>
+   <div class="portfolio-logo-crop"><img src="HELPING LOCAL BUSINESSES GROW BEYOND THE STOREFRONT (1).png" alt="Official CHEL Web Studio logo and tagline" loading="lazy" decoding="async"></div>
    <div>
     <div class="eyebrow">In-house project</div>
     <h3>CHEL Web Studio</h3>
@@ -309,7 +314,7 @@ footer{background:var(--espresso);color:#E7E1D5}
  </div>
 </section>
 
-<section class="alt">
+<section class="alt" data-page="about">
  <div class="wrap">
   <div class="sec-head">
    <div class="eyebrow">Who I Can Help</div>
@@ -322,7 +327,7 @@ footer{background:var(--espresso);color:#E7E1D5}
  </div>
 </section>
 
-<section class="dark" id="tips">
+<section class="dark" id="tips" data-page="about">
  <div class="wrap">
   <div class="sec-head">
    <div class="eyebrow">Free Business Tip</div>
@@ -339,7 +344,7 @@ footer{background:var(--espresso);color:#E7E1D5}
  </div>
 </section>
 
-<section>
+<section data-page="about">
  <div class="wrap reminder">
   <div class="eyebrow">A Little Reminder</div>
   <h2>Your business may be local, but your opportunities don’t have to stop at your doorstep. 🇵🇭</h2>
@@ -348,7 +353,7 @@ footer{background:var(--espresso);color:#E7E1D5}
  </div>
 </section>
 
-<section class="dark contact" id="contact">
+<section class="dark contact" id="contact" data-page="contact">
  <div class="wrap">
   <div class="avatar"><img src="c35ac385-a951-4c47-888c-29a6f864242c.jpeg" alt="Chelle Abella in a black blazer, looking toward the light" width="1024" height="1536" loading="lazy" decoding="async"></div>
   <div class="eyebrow">Let’s Talk</div>
@@ -370,5 +375,8 @@ footer{background:var(--espresso);color:#E7E1D5}
  </div>
 </footer>
 
+<script>
+(()=>{const pageForHash={top:'home',services:'services',portfolio:'portfolio',story:'about',why:'about',tips:'about',contact:'contact'};const links=[...document.querySelectorAll('nav a[href^="#"]')];function resolve(hash){const id=(hash||'').replace(/^#/,'');if(pageForHash[id])return pageForHash[id];const target=id&&document.getElementById(id);return target?.dataset.page||'home'}function activate(view,hash,write){document.body.dataset.view=view;document.body.classList.add('views-ready');links.forEach(link=>{const current=resolve(link.hash)===view; if(current)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});if(write&&hash!==location.hash)history.pushState({view},'',hash||'#top');window.scrollTo({top:0,behavior:'instant'})}document.addEventListener('click',event=>{const link=event.target.closest('a[href^="#"]');if(!link)return;const hash=link.getAttribute('href');event.preventDefault();activate(resolve(hash),hash,true)});window.addEventListener('popstate',()=>activate(resolve(location.hash),location.hash,false));window.addEventListener('hashchange',()=>activate(resolve(location.hash),location.hash,false));const initial=location.hash&&document.getElementById(location.hash.slice(1))?location.hash:'#top';activate(resolve(initial),initial,false)})();
+</script>
 </body>
 </html>
