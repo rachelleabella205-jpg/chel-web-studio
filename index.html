@@ -224,14 +224,21 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
 @media(max-width:860px){.hero{padding-top:calc(118px + 50vw + 26px)}.hero-cover,.hero:before,.hero:after{top:118px}}
 @media(max-width:560px){.hero{padding-top:calc(118px + 50vw + 24px)}}
 </style>
+<style id="chel-mobile-sidebar">
+.menu-toggle,.menu-scrim{display:none}
+@media(max-width:860px){nav .wrap{height:72px!important;min-height:72px;flex-wrap:nowrap;padding:8px 18px;gap:12px}nav .logo{margin-right:auto}.menu-toggle{display:flex;position:relative;z-index:112;width:46px;height:46px;flex:0 0 46px;border:1px solid rgba(36,76,59,.18);border-radius:50%;background:var(--white);align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}.menu-toggle span{display:block;width:18px;height:2px;border-radius:2px;background:var(--forest);transition:transform .2s,opacity .2s}.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}.menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-7px) rotate(-45deg)}nav .btn.small{display:none}nav ul{display:flex;position:fixed;z-index:110;top:0;right:0;bottom:0;width:min(84vw,360px);height:100vh;height:100dvh;order:initial;flex:none;flex-direction:column;align-items:stretch;gap:0;overflow-y:auto;white-space:normal;padding:108px 30px 34px;background:var(--beige);border-left:1px solid rgba(36,76,59,.14);box-shadow:-24px 0 60px rgba(36,47,41,.16);transform:translateX(105%);visibility:hidden;transition:transform .28s ease,visibility .28s;scrollbar-width:thin}nav ul li{border-bottom:1px solid rgba(36,76,59,.12)}nav ul a{display:block;padding:15px 4px;font-family:'Montserrat',sans-serif;font-size:1.08rem;color:var(--espresso)}nav ul a[aria-current="page"]{color:var(--forest)}body.menu-open nav ul{transform:translateX(0);visibility:visible}.menu-scrim{position:fixed;z-index:99;inset:0;width:100%;height:100%;border:0;background:rgba(24,37,30,.38);opacity:0;visibility:hidden;transition:opacity .28s,visibility .28s;cursor:pointer}body.menu-open .menu-scrim{display:block;opacity:1;visibility:visible}body.menu-open{overflow:hidden}}
+@media(prefers-reduced-motion:reduce){nav ul,.menu-toggle span,.menu-scrim{transition:none}}
+</style>
 </head>
 <body>
 
 
+<button class="menu-scrim" type="button" aria-label="Close navigation menu" tabindex="-1"></button>
 <nav>
  <div class="wrap">
   <a href="#top" class="logo" aria-label="CHEL Web Studio home"><img src="HELPING LOCAL BUSINESSES GROW BEYOND THE STOREFRONT (1).png" alt="CHEL Web Studio — Helping Local Businesses Grow Beyond the Storefront"></a>
-  <ul>
+  <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul id="primary-navigation">
    <li><a href="#top">Home</a></li>
    <li><a href="#services">Services</a></li>
    <li><a href="#portfolio">Portfolio</a></li>
@@ -249,7 +256,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
   <div>
    <div class="eyebrow">Chelle Abella · Websites &amp; Shopify Stores</div>
    <h1>Helping Local Businesses <em>Grow Beyond the Storefront</em></h1>
-   <p class="lead">Hi, I’m Chelle, founder of CHEL Web Studio. I build professional websites, mobile-friendly online stores, and convenient online ordering for Filipino small businesses ready to take their next step into the digital world.</p>
+   <p class="lead">CHEL Web Studio build professional websites, mobile-friendly online stores, and convenient online ordering for Filipino small businesses ready to take their next step into the digital world.</p>
    <div class="cta-row">
     <a class="btn" href="https://calendly.com/chelleabella" target="_blank" rel="noopener">Let's Build Your Website</a>
     <a class="btn ghost" href="#services">See What I Offer</a>
@@ -259,7 +266,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
 </header>
 
 
-<section class="alt" data-page="about">
+<section class="alt" data-page="home">
  <div class="wrap">
   <div class="sec-head">
    <div class="eyebrow">Sound Familiar?</div>
@@ -299,7 +306,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
 </section>
 
 
-<section class="alt" id="why" data-page="about">
+<section class="alt" id="why" data-page="home">
  <div class="wrap">
   <div class="sec-head">
    <div class="eyebrow">Why a Website</div>
@@ -356,7 +363,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
 </section>
 
 
-<section class="alt" data-page="about">
+<section class="alt" data-page="home">
  <div class="wrap">
   <div class="sec-head">
    <div class="eyebrow">Who I Can Help</div>
@@ -370,7 +377,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
 </section>
 
 
-<section class="dark" id="tips" data-page="about">
+<section class="dark" id="tips" data-page="home">
  <div class="wrap">
   <div class="sec-head">
    <div class="eyebrow">Free Business Tip</div>
@@ -424,6 +431,9 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
 
 <script>
 (()=>{const pageForHash={top:'home',services:'services',portfolio:'portfolio',story:'about',why:'about',tips:'about',contact:'contact'};const links=[...document.querySelectorAll('nav a[href^="#"]')];function resolve(hash){const id=(hash||'').replace(/^#/,'');if(pageForHash[id])return pageForHash[id];const target=id&&document.getElementById(id);return target?.dataset.page||'home'}function activate(view,hash,write){document.body.dataset.view=view;document.body.classList.add('views-ready');links.forEach(link=>{const current=resolve(link.hash)===view; if(current)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});if(write&&hash!==location.hash)history.pushState({view},'',hash||'#top');window.scrollTo({top:0,behavior:'instant'})}document.addEventListener('click',event=>{const link=event.target.closest('a[href^="#"]');if(!link)return;const hash=link.getAttribute('href');event.preventDefault();activate(resolve(hash),hash,true)});window.addEventListener('popstate',()=>activate(resolve(location.hash),location.hash,false));window.addEventListener('hashchange',()=>activate(resolve(location.hash),location.hash,false));const initial=location.hash&&document.getElementById(location.hash.slice(1))?location.hash:'#top';activate(resolve(initial),initial,false)})();
+</script>
+<script id="chel-mobile-menu">
+(()=>{const button=document.querySelector('.menu-toggle'),scrim=document.querySelector('.menu-scrim'),navLinks=document.querySelectorAll('#primary-navigation a');if(!button)return;const setOpen=open=>{document.body.classList.toggle('menu-open',open);button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu')};button.addEventListener('click',()=>setOpen(button.getAttribute('aria-expanded')!=='true'));scrim.addEventListener('click',()=>setOpen(false));navLinks.forEach(link=>link.addEventListener('click',()=>setOpen(false)));document.addEventListener('keydown',event=>{if(event.key==='Escape')setOpen(false)});})();
 </script>
 </body>
 </html>
