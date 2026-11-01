@@ -178,13 +178,16 @@ a:focus-visible{outline:3px solid var(--forest);outline-offset:4px;border-radius
 footer{background:var(--espresso);color:#E7E1D5}
 .contact-options{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:22px auto 0}.contact-options a{display:inline-flex;align-items:center;color:var(--cream);border:1px solid rgba(244,239,228,.36);border-radius:999px;padding:10px 16px;text-decoration:none;font-size:.9rem;transition:background .2s ease,border-color .2s ease}.contact-options a:hover{background:rgba(197,166,107,.14);border-color:var(--champagne)}.contact-options span{color:var(--champagne);margin-right:8px}@media(max-width:560px){.contact-options{gap:9px}.contact-options a{font-size:.78rem;padding:10px 12px}}
 
+
 .logo{display:block;position:relative;width:210px;height:94px;overflow:hidden;flex:none;letter-spacing:0}.logo img{position:absolute;left:50%;top:50%;width:110%;max-width:none;height:auto;transform:translate(-50%,-52%)}nav .wrap{height:96px}.portfolio-showcase{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,56px);align-items:center;background:var(--white);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,42px);box-shadow:0 16px 38px rgba(59,47,41,.06)}.portfolio-logo-crop{position:relative;aspect-ratio:2.2/1;overflow:hidden;background:var(--beige);border-radius:16px}.portfolio-logo-crop img{position:absolute;left:50%;top:50%;width:110%;max-width:none;height:auto;transform:translate(-50%,-52%)}.portfolio-showcase h3{font-size:clamp(1.6rem,3vw,2rem);margin:6px 0 12px}.portfolio-showcase p{margin-bottom:22px}@media(max-width:860px){nav .logo{width:168px;height:75px}.portfolio-showcase{grid-template-columns:1fr}}@media(max-width:560px){nav .logo{width:150px;height:68px}}
+
 
 /* Navigation switches between focused page views. */
 body.views-ready [data-page]{display:none!important}
 body.views-ready[data-view="home"] [data-page="home"],body.views-ready[data-view="services"] [data-page="services"],body.views-ready[data-view="portfolio"] [data-page="portfolio"],body.views-ready[data-view="about"] [data-page="about"],body.views-ready[data-view="contact"] [data-page="contact"]{display:block!important}
 nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
 </style>
+
 
 <style id="chel-home-cover">
 .hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:clamp(620px,calc(100svh - 96px),780px);padding:148px 0 86px;background:#F4EFE4}
@@ -196,24 +199,34 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
 @media(max-width:560px){.hero{min-height:680px;padding-top:156px}.hero-cover{object-position:64% center}}
 </style>
 
+
 <style id="chel-cover-visibility-fix">
 .hero:after{width:min(64%,820px)}
 @media(max-width:860px){.hero:before{background:linear-gradient(90deg,rgba(244,239,228,.18) 0%,rgba(244,239,228,.08) 58%,transparent 100%)}.hero:after{inset:0 auto 0 0;width:78%;background:linear-gradient(90deg,rgba(255,252,246,.95) 0%,rgba(255,252,246,.82) 62%,rgba(255,252,246,0) 100%);mask-image:linear-gradient(90deg,#000 0%,#000 56%,transparent 100%)}.hero .wrap>div:first-child{max-width:min(76vw,520px)}}
 @media(max-width:560px){.hero .wrap>div:first-child{max-width:88vw}}
 </style>
 
+
 <style id="chel-cover-copy-panel">
 @media(max-width:860px){.hero:after{width:72%;background:rgba(255,252,246,.35);mask-image:linear-gradient(90deg,#000 0%,#000 72%,transparent 100%)}.hero .wrap>div:first-child{max-width:min(76vw,520px);padding:clamp(18px,4vw,28px);border:1px solid rgba(36,76,59,.12);border-radius:24px;background:rgba(255,252,246,.84);box-shadow:0 20px 55px rgba(59,47,41,.12);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}}
 @media(max-width:560px){.hero .wrap>div:first-child{max-width:88vw;padding:20px}}
 </style>
+
 
 <style id="chel-wide-cover-mobile">
 .hero-cover{object-position:center 50%}
 @media(max-width:860px){.hero{display:block;min-height:0;padding:calc(96px + 50vw + 26px) 0 60px;background:linear-gradient(180deg,var(--beige),#EBECE4)}.hero-cover{inset:96px 0 auto;height:50vw;max-height:420px;object-fit:contain;object-position:center;background:var(--beige)}.hero:before{inset:96px 0 auto;height:50vw;background:linear-gradient(90deg,rgba(244,239,228,.06) 0%,transparent 45%,rgba(244,239,228,.05) 100%)}.hero:after{inset:96px auto auto 0;width:34%;height:50vw;background:linear-gradient(90deg,rgba(255,252,246,.55),rgba(255,252,246,0));mask-image:linear-gradient(90deg,#000 0%,transparent 100%);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}.hero>.wrap{display:block;position:relative;z-index:2}.hero .wrap>div:first-child{max-width:100%;margin:0;padding:0;background:transparent;border:0;border-radius:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}}
 @media(max-width:560px){.hero{padding-top:calc(96px + 50vw + 24px)}.hero-cover,.hero:before,.hero:after{height:50vw}}
 </style>
+
+<style id="chel-preserve-full-cover">
+.hero-cover{object-fit:contain;object-position:center;background:var(--beige)}
+@media(max-width:860px){.hero{padding-top:calc(118px + 50vw + 26px)}.hero-cover,.hero:before,.hero:after{top:118px}}
+@media(max-width:560px){.hero{padding-top:calc(118px + 50vw + 24px)}}
+</style>
 </head>
 <body>
+
 
 <nav>
  <div class="wrap">
@@ -228,6 +241,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
   <a class="btn small" href="https://calendly.com/chelleabella" target="_blank" rel="noopener">Let's Build Your Website</a>
  </div>
 </nav>
+
 
 <header class="hero" id="top" data-page="home">
  <img class="hero-cover" src="Warm Minimal Web Design Workspace.png" alt="Warm studio workspace with a laptop displaying the CHEL Web Studio website" fetchpriority="high" decoding="async">
@@ -244,6 +258,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
  </div>
 </header>
 
+
 <section class="alt" data-page="about">
  <div class="wrap">
   <div class="sec-head">
@@ -258,6 +273,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
   </ul>
  </div>
 </section>
+
 
 <section id="story" data-page="about">
  <div class="wrap story">
@@ -282,6 +298,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
  </div>
 </section>
 
+
 <section class="alt" id="why" data-page="about">
  <div class="wrap">
   <div class="sec-head">
@@ -300,6 +317,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
  </div>
 </section>
 
+
 <section id="services" data-page="services">
  <div class="wrap">
   <div class="sec-head">
@@ -316,6 +334,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
   </div>
  </div>
 </section>
+
 
 <section class="alt" id="portfolio" data-page="portfolio">
  <div class="wrap">
@@ -336,6 +355,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
  </div>
 </section>
 
+
 <section class="alt" data-page="about">
  <div class="wrap">
   <div class="sec-head">
@@ -348,6 +368,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
   </div>
  </div>
 </section>
+
 
 <section class="dark" id="tips" data-page="about">
  <div class="wrap">
@@ -366,6 +387,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
  </div>
 </section>
 
+
 <section data-page="about">
  <div class="wrap reminder">
   <div class="eyebrow">A Little Reminder</div>
@@ -374,6 +396,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
   <p>Of course, a website alone doesn’t guarantee more sales. It still takes good products, customer service, effective marketing, and a convenient buying experience. But when these work together, your business can be better prepared to serve customers and pursue new opportunities.</p>
  </div>
 </section>
+
 
 <section class="dark contact" id="contact" data-page="contact">
  <div class="wrap">
@@ -389,6 +412,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
  </div>
 </section>
 
+
 <footer>
  <div class="wrap">
   <b>CHEL Web Studio</b>
@@ -396,6 +420,7 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
   <span style="opacity:.7">Your business. Your online presence. More possibilities.</span>
  </div>
 </footer>
+
 
 <script>
 (()=>{const pageForHash={top:'home',services:'services',portfolio:'portfolio',story:'about',why:'about',tips:'about',contact:'contact'};const links=[...document.querySelectorAll('nav a[href^="#"]')];function resolve(hash){const id=(hash||'').replace(/^#/,'');if(pageForHash[id])return pageForHash[id];const target=id&&document.getElementById(id);return target?.dataset.page||'home'}function activate(view,hash,write){document.body.dataset.view=view;document.body.classList.add('views-ready');links.forEach(link=>{const current=resolve(link.hash)===view; if(current)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});if(write&&hash!==location.hash)history.pushState({view},'',hash||'#top');window.scrollTo({top:0,behavior:'instant'})}document.addEventListener('click',event=>{const link=event.target.closest('a[href^="#"]');if(!link)return;const hash=link.getAttribute('href');event.preventDefault();activate(resolve(hash),hash,true)});window.addEventListener('popstate',()=>activate(resolve(location.hash),location.hash,false));window.addEventListener('hashchange',()=>activate(resolve(location.hash),location.hash,false));const initial=location.hash&&document.getElementById(location.hash.slice(1))?location.hash:'#top';activate(resolve(initial),initial,false)})();
