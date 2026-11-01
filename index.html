@@ -185,6 +185,16 @@ body.views-ready [data-page]{display:none!important}
 body.views-ready[data-view="home"] [data-page="home"],body.views-ready[data-view="services"] [data-page="services"],body.views-ready[data-view="portfolio"] [data-page="portfolio"],body.views-ready[data-view="about"] [data-page="about"],body.views-ready[data-view="contact"] [data-page="contact"]{display:block!important}
 nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
 </style>
+
+<style id="chel-home-cover">
+.hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:clamp(620px,calc(100svh - 96px),780px);padding:148px 0 86px;background:#F4EFE4}
+.hero-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 52%;z-index:-2}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(244,239,228,.52) 0%,rgba(244,239,228,.34) 38%,rgba(244,239,228,.08) 68%,rgba(244,239,228,.02) 100%)}
+.hero:after{content:"";position:absolute;inset:0 auto 0 0;width:min(70%,900px);z-index:0;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:linear-gradient(90deg,rgba(255,252,246,.92) 0%,rgba(255,252,246,.78) 57%,rgba(255,252,246,0) 100%);mask-image:linear-gradient(90deg,#000 0%,#000 56%,transparent 100%);pointer-events:none}
+.hero>.wrap{display:block;position:relative;z-index:1;width:100%}.hero .wrap>div:first-child{max-width:600px}.hero h1{max-width:11ch}.hero p.lead{color:#4b493f}.hero .eyebrow{text-shadow:0 1px 10px rgba(255,252,246,.75)}.hero .btn.ghost{background:rgba(255,252,246,.72);backdrop-filter:blur(8px)}
+@media(max-width:860px){.hero{min-height:680px;padding:158px 0 70px}.hero-cover{object-position:63% center}.hero:before{background:linear-gradient(180deg,rgba(244,239,228,.16) 0%,rgba(244,239,228,.48) 48%,rgba(244,239,228,.75) 100%)}.hero:after{width:100%;background:linear-gradient(90deg,rgba(255,252,246,.92),rgba(255,252,246,.70));mask-image:linear-gradient(180deg,#000 0%,#000 68%,transparent 100%)}.hero .wrap>div:first-child{max-width:100%}.hero h1{max-width:12ch}nav .btn.small{font-size:.68rem;padding:8px 8px}}
+@media(max-width:560px){.hero{min-height:680px;padding-top:156px}.hero-cover{object-position:64% center}}
+</style>
 </head>
 <body>
 
@@ -198,26 +208,21 @@ nav ul a[aria-current="page"]{color:var(--forest);font-weight:700}
    <li><a href="#story">About</a></li>
    <li><a href="#contact">Contact</a></li>
   </ul>
-  <a class="btn small" href="https://calendly.com/chelleabella" target="_blank" rel="noopener">Book a Consultation</a>
+  <a class="btn small" href="https://calendly.com/chelleabella" target="_blank" rel="noopener">Let's Build Your Website</a>
  </div>
 </nav>
 
 <header class="hero" id="top" data-page="home">
+ <img class="hero-cover" src="Warm Modern Web Design Workspace.png" alt="Warm studio workspace with a laptop displaying the CHEL Web Studio website" fetchpriority="high" decoding="async">
  <div class="wrap">
   <div>
    <div class="eyebrow">Chelle Abella · Websites &amp; Shopify Stores</div>
    <h1>Helping Local Businesses <em>Grow Beyond the Storefront</em></h1>
    <p class="lead">Hi, I’m Chelle, founder of CHEL Web Studio. I build professional websites, mobile-friendly online stores, and convenient online ordering for Filipino small businesses ready to take their next step into the digital world.</p>
    <div class="cta-row">
-    <a class="btn" href="https://calendly.com/chelleabella" target="_blank" rel="noopener">Book a Free Consultation</a>
+    <a class="btn" href="https://calendly.com/chelleabella" target="_blank" rel="noopener">Let's Build Your Website</a>
     <a class="btn ghost" href="#services">See What I Offer</a>
    </div>
-  </div>
-  <div class="portrait">
-   <div class="frame">
-    <img src="12c4788c-2c6d-4872-b0a8-0b2d367e6786.jpeg" alt="Chelle Abella seated in a black blazer, founder of CHEL Web Studio" width="1024" height="1536" fetchpriority="high" decoding="async">
-   </div>
-   <div class="badge"><b>Chelle Abella</b>Founder, CHEL Web Studio</div>
   </div>
  </div>
 </header>
